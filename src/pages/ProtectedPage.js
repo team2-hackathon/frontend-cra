@@ -1,5 +1,15 @@
 import { Outlet } from "react-router-dom";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
 export const ProtectedPage = () => {
-  return <>{false ? <Outlet /> : <p>You may not view this page</p>}</>;
+  return (
+    <>
+      <SignedIn>
+        <Outlet />
+      </SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
+  );
 };
