@@ -1,7 +1,8 @@
 export const NavBar = () => {
   return (
-    <div>
-      <ul>
+    <div className="bg-yellow-100">
+      This is the NavBar. Below are links
+      <ul className="flex gap-4">
         <li>
           <a href="/">Home</a>
         </li>
