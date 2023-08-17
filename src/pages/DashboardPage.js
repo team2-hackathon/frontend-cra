@@ -10,7 +10,7 @@ export const DashboardPage = () => {
     const data = {
       email: user.primaryEmailAddress.emailAddress,
       username: user.username,
-      fullName: user.fullName,
+      fullName: user.fullName, 
     };
     try {
       const res = await axios.post("http://localhost:8080/checkAuth", data, {
