@@ -13,13 +13,10 @@ export const DashboardPage = () => {
       fullName: user.fullName,
     };
     try {
-      const res = await axios.post(
-        `${process.env.REACT_APP_API_SERVER_URL}/checkAuth`,
-        data,
-        {
-          headers: { Authorization: `Bearer ${await getToken()}` },
-        }
-      );
+      const URL = `${process.env.REACT_APP_API_SERVER_URL}/checkAuth`;
+      const res = await axios.post(URL, data, {
+        headers: { Authorization: `Bearer ${await getToken()}` },
+      });
       console.log(res.data);
     } catch (err) {
       console.log(err);
@@ -34,7 +31,7 @@ export const DashboardPage = () => {
   return (
     <div>
       <img src={dashboardPlaceholder} />
-      <button onClick={checkAuth}>
+      <button onClick={checkAuth} className="p-2 bg-amber-500 rounded-xl">
         This button sends an auth to the backend
       </button>
       <button className="p-2 bg-lime-400 rounded-xl">
