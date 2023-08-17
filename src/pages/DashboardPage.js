@@ -13,13 +13,11 @@ export const DashboardPage = () => {
       fullName: user.fullName,
     };
     try {
-      const res = await axios.post(
-        `${process.env.REACT_APP_API_SERVER_URL}/checkAuth`,
-        data,
-        {
-          headers: { Authorization: `Bearer ${await getToken()}` },
-        }
-      );
+      const URL = `${process.env.REACT_APP_API_SERVER_URL}/checkAuth`;
+      console.log(URL);
+      const res = await axios.post(URL, data, {
+        headers: { Authorization: `Bearer ${await getToken()}` },
+      });
       console.log(res.data);
     } catch (err) {
       console.log(err);
