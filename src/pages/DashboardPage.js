@@ -2,6 +2,8 @@ import { SignOutButton, useAuth, useUser } from "@clerk/clerk-react";
 import dashboardPlaceholder from "../assets/dashPlaceholder.gif";
 import axios from "axios";
 import { useEffect } from "react";
+import { Transactions } from "../component/Transactions";
+import { DashHeader } from "../component/DashHeader";
 export const DashboardPage = () => {
   const { getToken } = useAuth();
   const { user } = useUser();
@@ -30,7 +32,10 @@ export const DashboardPage = () => {
 
   return (
     <div>
-      <img src={dashboardPlaceholder} />
+      {/* <img src={dashboardPlaceholder} /> */}
+      <DashHeader />
+      <Transactions />
+
       <button onClick={checkAuth} className="p-2 bg-amber-500 rounded-xl">
         This button sends an auth to the backend
       </button>
