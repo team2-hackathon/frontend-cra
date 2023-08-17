@@ -7,44 +7,46 @@ import LoansSvg from "../assets/icons/about/Loans.svg";
 import MarriedSvg from "../assets/icons/about/Married.svg";
 import PartnerSvg from "../assets/icons/about/Partner.svg";
 import RentSvg from "../assets/icons/about/Rent.svg";
+import ClickableBox from "../component/ClickableBox";
+
 
 export const OnboardingAboutPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center mt-10">
-      <h1 className="text-3xl font-bold mb-8">Tell us about yourself</h1>
+    <div className="flex flex-col items-center justify-center mt-15">
+      <h1 className="text-3xl font-bold mb-20 mt-10">Tell us about yourself</h1>
       
-      <div className="flex flex-wrap justify-center space-x-4 space-y-4">
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={MarriedSvg} alt="Married" />
-        <p className="text-center">I am married</p>
+      <div className="flex flex-wrap justify-center space-x-4 space-y-4 mt-15">
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+          <ClickableBox image={MarriedSvg} alt="Married" text="I am married" />
+        
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={BabySvg} alt="Baby" />
-        <p className="text-center">I have kids</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={BabySvg} alt="Baby" text="I have kids" />
+        
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={RentSvg} alt="Rent" />
-        <p className="text-center">I rent</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={RentSvg} alt="Rent" text="I rent" />
+        
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={HouseSvg} alt="House" />
-          <p className="text-center">I own a house</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={HouseSvg} alt="House" text="I own a house" />
+       
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={BusinessSvg} alt="Business" />
-          <p className="text-center">I have a business</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={BusinessSvg} alt="Business" text="I have a business" />
+       
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={LoansSvg} alt="Loans" />
-          <p className="text-center">I pay student loans</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={LoansSvg} alt="Loan" text="I pay student loans" />
+        
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={AdvisorSvg} alt="Advisor" />
-        <p className="text-center">I have a financial advisor</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={AdvisorSvg} alt="Advisor" text="I have a financial advisor" />
+        
         </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg flex flex-col items-center justify-center">
-        <img src={PartnerSvg} alt="Partner" />
-        <p className="text-center">I share finances with a partner</p>
+        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox image={PartnerSvg} alt="Partner" text="I share finances with a partner" />
+        
         </div>
       </div>
       
