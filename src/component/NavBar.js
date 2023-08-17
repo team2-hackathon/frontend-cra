@@ -11,7 +11,7 @@ export const NavBar = () => {
       <ul className="flex justify-around w-full gap-2 mx-auto">
         <li>
           <a
-            href="/"
+            href="/dashboard"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={home} className="w-[1.5rem]" />
@@ -20,7 +20,7 @@ export const NavBar = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="/accounts"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={account} className="w-[1.5rem]" />
@@ -29,7 +29,7 @@ export const NavBar = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="/trends"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={trends} className="w-[1.5rem]" />
@@ -38,7 +38,7 @@ export const NavBar = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="/plans"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={plans} className="w-[1.5rem]" />
@@ -47,7 +47,7 @@ export const NavBar = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="/payments"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={payments} className="w-[1.5rem]" />
