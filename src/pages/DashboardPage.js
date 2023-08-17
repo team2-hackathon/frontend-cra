@@ -13,7 +13,7 @@ export const DashboardPage = () => {
       fullName: user.fullName,
     };
     try {
-      const res = await axios.post("http://localhost:8080/get", data, {
+      const res = await axios.post("http://localhost:8080/checkAuth", data, {
         headers: { Authorization: `Bearer ${await getToken()}` },
       });
       console.log(res.data);
