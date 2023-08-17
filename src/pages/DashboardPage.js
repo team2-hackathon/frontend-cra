@@ -4,7 +4,10 @@ export const DashboardPage = () => {
   return (
     <div>
       Hello
-      <SignOutButton />
+      <br></br>
+      <button className="p-2 bg-lime-400 rounded-xl">
+        <SignOutButton />
+      </button>
     </div>
   );
 };
