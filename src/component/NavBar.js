@@ -7,11 +7,11 @@ import payments from "../assets/icons/nav/payments.svg";
 
 export const NavBar = () => {
   return (
-    <nav className="absolute bottom-0 flex items-center w-full h-20 max-w-sm text-sm bg-nav-gray">
+    <nav className="fixed bottom-0 flex items-center w-full h-20 max-w-sm text-sm bg-nav-gray">
       <ul className="flex justify-around w-full gap-2 mx-auto">
         <li>
           <a
-            href="/"
+            href="/dashboard"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={home} className="w-[1.5rem]" />
@@ -19,17 +19,19 @@ export const NavBar = () => {
           </a>
         </li>
         <li>
+
           <a
-            href="/"
+            href="/accounts"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={account} className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Accounts</span>
           </a>
+
         </li>
         <li>
           <a
-            href="/"
+            href="/trends"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={trends} className="w-[1.5rem]" />
@@ -38,7 +40,7 @@ export const NavBar = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="/plans"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={plans} className="w-[1.5rem]" />
@@ -47,7 +49,7 @@ export const NavBar = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="/payments"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
             <img src={payments} className="w-[1.5rem]" />
