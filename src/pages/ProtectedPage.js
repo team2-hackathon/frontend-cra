@@ -6,8 +6,10 @@ export const ProtectedPage = () => {
   return (
     <>
       <SignedIn>
-        <NavBar />
-        <Outlet />
+        <div className="pb-32 ">
+          <NavBar />
+          <Outlet />
+        </div>
       </SignedIn>
       <SignedOut>
         <RedirectToSignIn />
