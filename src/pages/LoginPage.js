@@ -1,17 +1,11 @@
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  UserButton,
-  useUser,
-  RedirectToSignIn,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
+import { DashboardPage } from "./DashboardPage";
 
 export const LoginPage = () => {
   return (
     <div>
       <SignedIn>
-        <Welcome />
+        <DashboardPage />
       </SignedIn>
       <SignedOut>
         <RedirectToSignIn />
@@ -19,7 +13,3 @@ export const LoginPage = () => {
     </div>
   );
 };
-
-function Welcome() {
-  return <div>Hello you are signed in</div>;
-}

@@ -4,6 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import { ProtectedPage } from "./pages/ProtectedPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { LoginPage } from "./pages/LoginPage";
+import Logout from "./pages/Logout";
+import { HomePage } from "./pages/HomePage";
+import { NavBar } from "./component/NavBar";
 
 if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
@@ -11,15 +14,20 @@ if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
 const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 function App() {
   return (
-    <ClerkProvider publishableKey={clerkPubKey}>
-      <Routes>
-        <Route path="/" element={<h1>HomePage</h1>} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route element={<ProtectedPage />}>
-          <Route path="Dashboard" element={<DashboardPage />} />
-        </Route>
-      </Routes>
-    </ClerkProvider>
+    <>
+      <NavBar />
+
+      <ClerkProvider publishableKey={clerkPubKey}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/logout" elemen={<Logout />} />
+          <Route element={<ProtectedPage />}>
+            <Route path="/dashboard" element={<DashboardPage />} />
+          </Route>
+        </Routes>
+      </ClerkProvider>
+    </>
   );
 }
 
