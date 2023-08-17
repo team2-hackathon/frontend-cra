@@ -13,7 +13,7 @@ export const DashboardPage = () => {
 
   return (
     <div>
-      <img src={dashboardPlaceholder} />
+      <img src={dashboardPlaceholder} alt="dashboardPlaceholder"/>
       <button onClick={useFetch}>
         This button sends an auth to the backend
       </button>

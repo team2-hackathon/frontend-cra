@@ -1,4 +1,4 @@
-import placeholderSVG from "../assets/icons/placeholder.svg";
+// import placeholderSVG from "../assets/icons/placeholder.svg";
 import account from "../assets/icons/nav/account.svg";
 import home from "../assets/icons/nav/home.svg";
 import trends from "../assets/icons/nav/trends.svg";
@@ -14,7 +14,7 @@ export const NavBar = () => {
             href="/dashboard"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
-            <img src={home} className="w-[1.5rem]" />
+            <img src={home} alt="home" className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Dashboard</span>
           </a>
         </li>
@@ -24,7 +24,7 @@ export const NavBar = () => {
             href="/accounts"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
-            <img src={account} className="w-[1.5rem]" />
+            <img src={account} alt="account" className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Accounts</span>
           </a>
 
@@ -34,7 +34,7 @@ export const NavBar = () => {
             href="/trends"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
-            <img src={trends} className="w-[1.5rem]" />
+            <img src={trends} alt="trends" className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Trends</span>
           </a>
         </li>
@@ -43,7 +43,7 @@ export const NavBar = () => {
             href="/plans"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
-            <img src={plans} className="w-[1.5rem]" />
+            <img src={plans} alt="plans" className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Plans</span>
           </a>
         </li>
@@ -52,7 +52,7 @@ export const NavBar = () => {
             href="/payments"
             className="flex flex-col items-center justify-center w-[2.5rem"
           >
-            <img src={payments} className="w-[1.5rem]" />
+            <img src={payments} alt="payments" className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Payments</span>
           </a>
         </li>

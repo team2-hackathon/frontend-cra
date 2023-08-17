@@ -1,14 +1,14 @@
 import React from "react";
-import AdvisorSvg from "../SVGs/About_Icons/Advisor.svg";
-import BabySvg from "../SVGs/About_Icons/Baby.svg";
-import BusinessSvg from "../SVGs/About_Icons/Business.svg";
-import HouseSvg from "../SVGs/About_Icons/House.svg";
-import LoansSvg from "../SVGs/About_Icons/Loans.svg";
-import MarriedSvg from "../SVGs/About_Icons/Married.svg";
-import PartnerSvg from "../SVGs/About_Icons/Partner.svg";
-import RentSvg from "../SVGs/About_Icons/Rent.svg";
+import AdvisorSvg from "../assets/icons/about/Advisor.svg";
+import BabySvg from "../assets/icons/about/Baby.svg";
+import BusinessSvg from "../assets/icons/about/Business.svg";
+import HouseSvg from "../assets/icons/about/House.svg";
+import LoansSvg from "../assets/icons/about/Loans.svg";
+import MarriedSvg from "../assets/icons/about/Married.svg";
+import PartnerSvg from "../assets/icons/about/Partner.svg";
+import RentSvg from "../assets/icons/about/Rent.svg";
 
-export const AboutPage = () => {
+export const OnboardingAboutPage = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-10">
       <h1 className="text-3xl font-bold mb-8">Tell us about yourself</h1>

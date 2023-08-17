@@ -8,7 +8,7 @@ export const HomePage = () => {
       <h2 className="text-base text-gray-600 font-semibold text-center py-4 px-6 mb-6">
         See everything from one place at a glance so you can make the best informed decisions on your finances
       </h2>
-
+    
       <div className="flex flex-col items-center space-y-4 mt-12">
         <button className="bg-blue-400 hover:bg-gray-600 text-white px-4 py-2 rounded">
           Sign up with Google
@@ -29,5 +29,7 @@ export const HomePage = () => {
       </button>
 
     </div>
+    </div>
+
   );
 };
