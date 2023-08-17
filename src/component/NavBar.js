@@ -7,7 +7,7 @@ import payments from "../assets/icons/nav/payments.svg";
 
 export const NavBar = () => {
   return (
-    <nav className="absolute bottom-0 flex items-center w-full h-20 max-w-sm text-sm bg-nav-gray">
+    <nav className="fixed bottom-0 flex items-center w-full h-20 max-w-sm text-sm bg-nav-gray">
       <ul className="flex justify-around w-full gap-2 mx-auto">
         <li>
           <a

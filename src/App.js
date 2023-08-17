@@ -20,8 +20,7 @@ function App() {
   return (
     <div className="bg-gray-800 min-h-fullscreen min-w-">
       {/* limits the size of the app to 384 */}
-      <div className="max-w-sm min-h-screen mx-auto bg-white">
-    
+      <div className="relative max-w-sm min-h-screen mx-auto bg-white">
         <ClerkProvider publishableKey={clerkPubKey}>
           <Routes>
             <Route path="/" element={<HomePage />} />
