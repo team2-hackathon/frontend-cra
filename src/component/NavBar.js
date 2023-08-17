@@ -19,6 +19,7 @@ export const NavBar = () => {
           </a>
         </li>
         <li>
+
           <a
             href="/accounts"
             className="flex flex-col items-center justify-center w-[2.5rem"
@@ -26,6 +27,7 @@ export const NavBar = () => {
             <img src={account} className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Accounts</span>
           </a>
+
         </li>
         <li>
           <a
