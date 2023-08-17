@@ -7,7 +7,10 @@ import { LoginPage } from "./pages/LoginPage";
 import Logout from "./pages/Logout";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
-import { NavBar } from "./component/NavBar";
+import { AccountsPage } from "./pages/AccountsPage";
+import { PlansPage } from "./pages/PlansPage";
+import { TrendsPage } from "./pages/TrendsPage";
+import { PaymentsPage } from "./pages/PaymentsPage";
 
 if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
@@ -15,21 +18,27 @@ if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
 const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 function App() {
   return (
-    <>
-      <NavBar />
 
-      <ClerkProvider publishableKey={clerkPubKey}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route element={<ProtectedPage />}>
-            <Route path="/dashboard" element={<DashboardPage />} />
-          </Route>
-        </Routes>
-      </ClerkProvider>
-    </>
+    <div className="bg-gray-800 min-h-fullscreen min-w-">
+      {/* limits the size of the app to 384 */}
+      <div className="relative max-w-sm min-h-screen mx-auto bg-white">
+        <ClerkProvider publishableKey={clerkPubKey}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route element={<ProtectedPage />}>
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/accounts" element={<AccountsPage />} />
+              <Route path="/plans" element={<PlansPage />} />
+              <Route path="/trends" element={<TrendsPage />} />
+              <Route path="/payments" element={<PaymentsPage />} />
+            </Route>
+          </Routes>
+        </ClerkProvider>
+      </div>
+    </div>
   );
 }
 
