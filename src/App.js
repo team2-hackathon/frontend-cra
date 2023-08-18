@@ -13,6 +13,7 @@ import { PlansPage } from "./pages/PlansPage";
 import { TrendsPage } from "./pages/TrendsPage";
 import { PaymentsPage } from "./pages/PaymentsPage";
 import { ConnectAccountPage } from "./pages/ConnectAccountPage";
+import { OnboardingChoosePage } from "./pages/OnboardingChoosePage";
 import UserPage from "./pages/UserPage";
 
 if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
@@ -32,6 +33,7 @@ function App() {
             <Route element={<ProtectedPage />}>
               <Route path="/about" element={<OnboardingAboutPage />} />
               <Route path="/goals" element={<OnboardingGoalsPage />} />
+              <Route path="/choose" element={<OnboardingChoosePage />} />
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/accounts" element={<AccountsPage />} />
               <Route path="/plans" element={<PlansPage />} />
