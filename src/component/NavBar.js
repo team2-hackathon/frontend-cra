@@ -1,4 +1,3 @@
-// import placeholderSVG from "../assets/icons/placeholder.svg";
 import account from "../assets/icons/nav/account.svg";
 import home from "../assets/icons/nav/home.svg";
 import trends from "../assets/icons/nav/trends.svg";
@@ -19,7 +18,6 @@ export const NavBar = () => {
           </a>
         </li>
         <li>
-
           <a
             href="/accounts"
             className="flex flex-col items-center justify-center w-[2.5rem"
@@ -27,7 +25,6 @@ export const NavBar = () => {
             <img src={account} alt="account" className="w-[1.5rem]" />
             <span className="text-[.5rem] text-black">Accounts</span>
           </a>
-
         </li>
         <li>
           <a

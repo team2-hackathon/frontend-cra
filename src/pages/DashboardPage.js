@@ -1,25 +1,42 @@
-import { SignOutButton, useAuth } from "@clerk/clerk-react";
-import dashboardPlaceholder from "../assets/dashPlaceholder.gif";
+import { useAuth, useUser } from "@clerk/clerk-react";
 import axios from "axios";
+import { useEffect } from "react";
+import { Transactions } from "../component/dashboard/Transactions";
+import { DashHeader } from "../component/dashboard/DashHeader";
+import { PredictedBudget } from "../component/dashboard/PredictedBudget";
+import { BudgetBreakDown } from "../component/dashboard/BudgetBreakDown";
 export const DashboardPage = () => {
   const { getToken } = useAuth();
+  const { user } = useUser();
 
-  async function useFetch() {
-    const res = await axios.get("http://localhost:8080/get", {
-      headers: { Authorization: `Bearer ${await getToken()}` },
-    });
-    console.log(res.data);
+  async function checkAuth() {
+    const data = {
+      email: user.primaryEmailAddress.emailAddress,
+      username: user.username,
+      fullName: user.fullName,
+    };
+    try {
+      const URL = `${process.env.REACT_APP_API_SERVER_URL}/checkAuth`;
+      const res = await axios.post(URL, data, {
+        headers: { Authorization: `Bearer ${await getToken()}` },
+      });
+      console.log(res.data);
+    } catch (err) {
+      console.log(err);
+    }
   }
+
+  useEffect(() => {
+    checkAuth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>
-      <img src={dashboardPlaceholder} alt="dashboardPlaceholder"/>
-      <button onClick={useFetch}>
-        This button sends an auth to the backend
-      </button>
-      <button className="p-2 bg-lime-400 rounded-xl">
-        <SignOutButton />
-      </button>
+      <DashHeader />
+      <PredictedBudget />
+      <BudgetBreakDown />
+      <Transactions />
     </div>
   );
 };
