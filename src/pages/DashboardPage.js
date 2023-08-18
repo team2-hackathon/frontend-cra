@@ -33,13 +33,10 @@ export const DashboardPage = () => {
 
   return (
     <div>
-      {/* <img src={dashboardPlaceholder} /> */}
       <DashHeader />
       <PredictedBudget />
       <BudgetBreakDown />
       <Transactions />
-
- 
     </div>
   );
 };

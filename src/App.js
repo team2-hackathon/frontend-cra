@@ -6,7 +6,8 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { LoginPage } from "./pages/LoginPage";
 import Logout from "./pages/Logout";
 import { HomePage } from "./pages/HomePage";
-import { AboutPage } from "./pages/AboutPage";
+import { OnboardingAboutPage } from "./pages/OnboardingAboutPage";
+import { OnboardingGoalsPage } from "./pages/OnboardingGoalsPage";
 import { AccountsPage } from "./pages/AccountsPage";
 import { PlansPage } from "./pages/PlansPage";
 import { TrendsPage } from "./pages/TrendsPage";
@@ -26,10 +27,11 @@ function App() {
         <ClerkProvider publishableKey={clerkPubKey}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/logout" element={<Logout />} />
             <Route element={<ProtectedPage />}>
+              <Route path="/about" element={<OnboardingAboutPage />} />
+              <Route path="/goals" element={<OnboardingGoalsPage />} />
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/accounts" element={<AccountsPage />} />
               <Route path="/plans" element={<PlansPage />} />
