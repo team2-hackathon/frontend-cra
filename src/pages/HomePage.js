@@ -15,8 +15,8 @@ export const HomePage = () => {
         informed decisions on your finances
       </h2>
    
-      <div className="flex flex-col items-center space-y-4 mt-12">
-        <button className="bg-blue-400 hover:bg-gray-600 text-white px-4 py-2 rounded">
+      <div className="flex flex-col items-center mt-12 space-y-4">
+        <button className="px-4 py-2 text-white bg-blue-400 rounded hover:bg-gray-600">
 
           Sign up with Google
         </button>
@@ -43,7 +43,7 @@ export const HomePage = () => {
           Continue
         </button>
       </a>
-    </div>
+  
     </div>
 
   );

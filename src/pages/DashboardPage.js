@@ -11,7 +11,6 @@ export const DashboardPage = () => {
 
   async function checkAuth() {
     const data = {
-      email: user.primaryEmailAddress.emailAddress,
       username: user.username,
       fullName: user.fullName,
     };

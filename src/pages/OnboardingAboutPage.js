@@ -9,49 +9,36 @@ import PartnerSvg from "../assets/icons/about/Partner.svg";
 import RentSvg from "../assets/icons/about/Rent.svg";
 import ClickableBox from "../component/ClickableBox";
 
-
 export const OnboardingAboutPage = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-15">
-      <h1 className="text-3xl font-bold mb-20 mt-10">Tell us about yourself</h1>
-      
-      <div className="flex flex-wrap justify-center space-x-4 space-y-4 mt-15">
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
-          <ClickableBox image={MarriedSvg} alt="Married" text="I am married" />
-        
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+      <h1 className="mt-10 mb-20 text-3xl font-bold">Tell us about yourself</h1>
+
+      <div className="flex flex-wrap justify-center gap-4 mt-15">
+        <ClickableBox image={MarriedSvg} alt="Married" text="I am married" />
         <ClickableBox image={BabySvg} alt="Baby" text="I have kids" />
-        
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
         <ClickableBox image={RentSvg} alt="Rent" text="I rent" />
-        
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
         <ClickableBox image={HouseSvg} alt="House" text="I own a house" />
-       
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
-        <ClickableBox image={BusinessSvg} alt="Business" text="I have a business" />
-       
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
+        <ClickableBox
+          image={BusinessSvg}
+          alt="Business"
+          text="I have a business"
+        />
         <ClickableBox image={LoansSvg} alt="Loan" text="I pay student loans" />
-        
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
-        <ClickableBox image={AdvisorSvg} alt="Advisor" text="I have a financial advisor" />
-        
-        </div>
-        <div className="bg-gray-200 w-1/3 p-2 rounded-lg items-center justify-center">
-        <ClickableBox image={PartnerSvg} alt="Partner" text="I share finances with a partner" />
-        
-        </div>
+        <ClickableBox
+          image={AdvisorSvg}
+          alt="Advisor"
+          text="I have a financial advisor"
+        />
+        <ClickableBox
+          image={PartnerSvg}
+          alt="Partner"
+          text="I share finances with a partner"
+        />
       </div>
-      
+
       <div className="mt-12">
-        <button className="bg-blue-400 hover:bg-gray-600 text-white px-16 py-2 rounded-lg">
+        <button className="px-16 py-2 text-black bg-[#C5E1F2] rounded-lg hover:bg-gray-600 border-[1px] border-[#82B8D9] shadow-md">
           Continue
         </button>
       </div>
