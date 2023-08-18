@@ -11,7 +11,6 @@ export const DashboardPage = () => {
 
   async function checkAuth() {
     const data = {
-      email: user.primaryEmailAddress.emailAddress,
       username: user.username,
       fullName: user.fullName,
     };
@@ -33,13 +32,10 @@ export const DashboardPage = () => {
 
   return (
     <div>
-      {/* <img src={dashboardPlaceholder} /> */}
       <DashHeader />
       <PredictedBudget />
       <BudgetBreakDown />
       <Transactions />
-
- 
     </div>
   );
 };
