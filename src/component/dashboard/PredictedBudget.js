@@ -6,7 +6,7 @@ export const PredictedBudget = () => {
     <div>
       <div className="w-10/12 p-2 mx-auto border-[1px] border-[#F8F8F8] rounded-2xl shadow-lg relative">
         {/* <h3 className="text-center">Predicted Budget Overview</h3> */}
-        <img src={predictedBudget} className="mx-auto" />
+        <img src={predictedBudget} alt="predbudget" className="mx-auto" />
         {!isHidden && (
           <div className="bg-[#D9D9D9] h-56 absolute w-[105%] left-[-2.5%] top-[20%] rounded-xl shadow-lg p-4">
             <h3 className="text-center text-[1.5rem] font-medium ">
