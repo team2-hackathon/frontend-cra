@@ -37,9 +37,11 @@ export const OnboardingAboutPage = () => {
       </div>
 
       <div className="mt-12">
-        <button className="px-16 py-2 text-black bg-[#C5E1F2] rounded-lg hover:bg-gray-600 border-[1px] border-[#82B8D9] shadow-md">
-          Continue
-        </button>
+        <a href="/goals">
+          <button className="px-16 py-2 text-black bg-[#C5E1F2] rounded-lg hover:bg-gray-600 border-[1px] border-[#82B8D9] shadow-md">
+            Continue
+          </button>
+        </a>
       </div>
     </div>
   );
