@@ -13,7 +13,6 @@ export const OnboardingGoalsPage = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-15">
       <h1 className="text-3xl font-bold mb-20 mt-10">Choose your Goals</h1>
-
       <div className="flex flex-wrap justify-center gap-4 mt-15">
         <ClickableBox
           image={SpendingSvg}
@@ -38,9 +37,11 @@ export const OnboardingGoalsPage = () => {
       </div>
 
       <div className="mt-12">
-        <button className="bg-blue-400 hover:bg-gray-600 text-white px-16 py-2 rounded-lg">
-          Continue
-        </button>
+        <a href="/dashboard">
+          <button className="bg-blue-400 hover:bg-gray-600 text-white px-16 py-2 rounded-lg">
+            Continue
+          </button>
+        </a>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ export const HomePage = () => {
         
       </div> */}
 
-      <a href="/dashboard">
+      <a href="/about">
         <button className="w-[18.75rem] bg-[#C5E1F2] py-[.625rem] rounded-md shadow-sm border-[1px] border-[#82B8D9]">
           Continue
         </button>
