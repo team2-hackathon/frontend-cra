@@ -12,6 +12,7 @@ import { PlansPage } from "./pages/PlansPage";
 import { TrendsPage } from "./pages/TrendsPage";
 import { PaymentsPage } from "./pages/PaymentsPage";
 import { ConnectAccountPage } from "./pages/ConnectAccountPage";
+import UserPage from "./pages/UserPage";
 
 if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
@@ -34,6 +35,7 @@ function App() {
               <Route path="/plans" element={<PlansPage />} />
               <Route path="/trends" element={<TrendsPage />} />
               <Route path="/payments" element={<PaymentsPage />} />
+              <Route path="/users" element={<UserPage />} />
               <Route path="/connect_account" element={<ConnectAccountPage />} />
             </Route>
           </Routes>
