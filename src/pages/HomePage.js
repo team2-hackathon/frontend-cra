@@ -1,9 +1,13 @@
 import React from "react";
-
+import splashImage from "../assets/splash.png";
+import "./homepage.css";
 export const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="mb-2 text-3xl font-bold text-center">
+      <div className="image-container fade-in">
+        <img src={splashImage} />
+      </div>
+      {/* <h1 className="mb-2 text-3xl font-bold text-center">
         Make money decisions easier
       </h1>
       <h2 className="px-6 py-4 mb-6 text-base font-semibold text-center text-gray-600">
@@ -29,7 +33,15 @@ export const HomePage = () => {
         <button className="p-4 bg-green-300 border-2 rounded-xl">
           <a href="/dashboard">Go to Dashboard</a>
         </button>
-      </div>
+
+        
+      </div> */}
+
+      <a href="/dashboard">
+        <button className="w-[18.75rem] bg-[#C5E1F2] py-[.625rem] rounded-md shadow-sm border-[1px] border-[#82B8D9]">
+          Continue
+        </button>
+      </a>
     </div>
   );
 };
