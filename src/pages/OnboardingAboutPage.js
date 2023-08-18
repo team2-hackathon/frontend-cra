@@ -10,10 +10,10 @@ import RentSvg from "../assets/icons/about/Rent.svg";
 import ClickableBox from "../component/ClickableBox";
 
 export const OnboardingAboutPage = () => {
+  // hello world
   return (
     <div className="flex flex-col items-center justify-center mt-15">
       <h1 className="mt-10 mb-20 text-3xl font-bold">Tell us about yourself</h1>
-
       <div className="flex flex-wrap justify-center gap-4 mt-15">
         <ClickableBox image={MarriedSvg} alt="Married" text="I am married" />
         <ClickableBox image={BabySvg} alt="Baby" text="I have kids" />
