@@ -5,7 +5,7 @@ export const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="image-container fade-in">
-        <img src={splashImage} />
+        <img src={splashImage} alt="splash" />
       </div>
       {/* <h1 className="mb-2 text-3xl font-bold text-center">
         Make money decisions easier
@@ -43,8 +43,6 @@ export const HomePage = () => {
           Continue
         </button>
       </a>
-  
     </div>
-
   );
 };
