@@ -6,7 +6,7 @@ export const BudgetBreakDown = () => {
         <h3 className="text-center text-[1.25rem] font-semibold">
           Budget Breakdown
         </h3>
-        <img src={budgetBreakdown} className="mx-auto mt-12" />
+        <img src={budgetBreakdown} alt="breakdown" className="mx-auto mt-12" />
       </div>
     </div>
   );
