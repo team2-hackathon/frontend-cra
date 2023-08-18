@@ -1,6 +1,6 @@
-import gearIcon from "../assets/icons/gear.svg";
-import usersIcon from "../assets/icons/users.svg";
-import notificationsIcon from "../assets/icons/notifications.svg";
+import gearIcon from "../../assets/icons/gear.svg";
+import usersIcon from "../../assets/icons/users.svg";
+import notificationsIcon from "../../assets/icons/notifications.svg";
 export const DashHeader = () => {
   function getDate() {
     const date = new Date();
@@ -8,7 +8,6 @@ export const DashHeader = () => {
     const dayOfWeek = date.toLocaleString("default", { weekday: "short" });
     const day = date.toLocaleString("default", { day: "numeric" });
     const month = date.toLocaleString("default", { month: "short" });
-    const year = date.toLocaleString("default", { year: "numeric" });
     // Wed, Aug 16
     return `${dayOfWeek}, ${month} ${day}`; //
   }
@@ -22,7 +21,9 @@ export const DashHeader = () => {
           {getDate()}
         </li>
         <li className="flex items-center justify-end col-span-1 gap-2">
-          <img src={usersIcon} className="cursor-pointer" />{" "}
+          <a href="/users">
+            <img src={usersIcon} className="cursor-pointer" />
+          </a>
           <img src={notificationsIcon} className="cursor-pointer" />
         </li>
       </ul>

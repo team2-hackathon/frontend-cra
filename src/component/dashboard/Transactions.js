@@ -1,7 +1,7 @@
 import { useAuth } from "@clerk/clerk-react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import shoppingCartIcon from "../assets/icons/shopping-cart.svg";
+import shoppingCartIcon from "../../assets/icons/shopping-cart.svg";
 
 export const Transactions = () => {
   const { getToken } = useAuth();
